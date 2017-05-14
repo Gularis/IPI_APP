@@ -17,9 +17,9 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->time('est_duration')->nullable();
-            $table->time('act_duration')->nullable();
-            $table->boolean('completed')->default('false');
+            $table->integer('est_duration')->nullable()->unsigned();
+            $table->integer('act_duration')->nullable()->unsigned();
+            $table->boolean('completed')->default(0);
             $table->text('feedback')->nullable();
             $table->integer('assignee_id')->nullable();
             $table->integer('owner_id');

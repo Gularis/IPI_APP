@@ -30,7 +30,7 @@
 		                <textarea name="feedback" id="task-feedback" class="form-control" ></textarea> 
 		            </div>
 		        </div>
-		        <input type="hidden" name="completed" value="true">
+		        <input type="hidden" name="completed" value="1">
 
 		        <div class="form-group">
 		            <div class="col-sm-offset-3 col-sm-6">

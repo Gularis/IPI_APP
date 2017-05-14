@@ -107,7 +107,7 @@ class TasksController extends Controller
 	} 
 	public function complete(Request $request, Task $task)
 	{
-		$task->completed = $request->completed;
+		$task->completed = 1;
 		$task->act_duration = $request->act_duration;
 		$task->feedback = $request->feedback;
 
