@@ -1,4 +1,4 @@
-<h1> Task List </h1> 
+<h1> Laravel - Task List </h1> 
 
 <p>na akelu mi to neslo deploynut, vyskusal som hadam vsetko, stale hadze http error 500</p>
 <a href="http://ipi-webapp.herokuapp.com/tasks"> Task list aplikacia</a>
