@@ -36,9 +36,9 @@
 		                @endforeach
 		            </tbody>
 		        </table>
-		        <button type="button" class="btn btn-default">
-	            	<a href="{{ url('tasks') }}"> back to tasks list</a>
-	            </button>
+		        <form method="get" action="{{ url('tasks') }}">
+		            <button class="btn btn-default" type="submit">Back to tasks list</button>
+		        </form>
 		    </div>
 		</div>
 	</div>	

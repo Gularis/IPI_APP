@@ -80,15 +80,16 @@
 		                @endforeach
 		            </tbody>
 		        </table>
+                <form method="get" action="{{ url('users') }}">
+        			<button class="btn btn-default" type="submit">Back to users list</button>
+		        </form>
+		        <form method="get" action="{{ url('tasks') }}">
+		            <button class="btn btn-default" type="submit">Back to tasks list</button>
+		        </form>
 		    </div>
 		</div>
 
-		<button type="button" class="btn btn-default">
-			<a href="{{ url('users') }}"> back to all users</a>
-		</button>
-		<button type="button" class="btn btn-default">
-			<a href="{{ url('tasks') }}"> back to tasks list</a>
-		</button>
+
 	</div>
 </div>
 

@@ -47,14 +47,13 @@
                 @else
                     <div>
                 @endif
-                    <button type="button" class="btn btn-primary">
-                        <a style="color: white;" href="{{ url('tasks/complete/'.$task->id) }}"> Complete</a>
-                    </button>
+                    <form method="get" action="{{ url('tasks/complete/'.$task->id) }}">
+                        <button class="btn btn-primary" type="submit">Complete</button>
+                    </form>
                 </div>
-                
-                <button type="button" class="btn btn-default">
-                    <a href="{{ url('tasks') }}"> back to tasks list</a>
-                </button>
+                <form method="get" action="{{ url('tasks') }}">
+                    <button class="btn btn-default" type="submit">Back to tasks list</button>
+                </form>
                 
                 </div>
             </div>

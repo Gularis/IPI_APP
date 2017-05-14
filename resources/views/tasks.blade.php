@@ -112,15 +112,28 @@
                                         </td>
                                        
                                         <td>
-                                            <button type="button" class="btn btn-default">
+                                  <!--          <button type="button" class="btn btn-default">
                                                 <a href="{{ url('tasks/'.$task->id.'/edit') }}"> Edit</a>
                                             </button>
+                                   !-->         
+                                            <form method="get" action="{{ url('tasks/'.$task->id.'/edit') }}">
+                                                <button class="btn btn-default" type="submit">Edit</button>
+                                            </form>
+
+
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-default">
+<!--                                            <button type="button" class="btn btn-default">
                                                 <a href="{{ url('tasks/complete/'.$task->id) }}"> Complete</a>
                                             </button>
+!-->
+                                        <form method="get" action="{{ url('tasks/complete/'.$task->id) }}">
+                                                <button class="btn btn-default" type="submit">Complete</button>
+                                        </form>
+
                                         </td>
+
+
                                         <td>
                                             <form action="{{ url('task/'.$task->id) }}" method="POST">
                                                 {{ csrf_field() }}
