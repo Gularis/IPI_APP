@@ -36,7 +36,11 @@
 	                <div class="col-sm-7">
 	                  <select name="assignee_id" class="form-control" id="task-assignee" value="{{ old('task') }}">
 	                    @foreach ($users as $user)
-	                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+	                    	@if ($user->id == $task->assignee->id)
+	                    		<option selected="selected" value="{{ $user->id }}">{{ $user->name }}</option>
+	                    	@else
+	                        	<option value="{{ $user->id }}">{{ $user->name }}</option>
+	                    	@endif
 	                    @endforeach
 	                  </select>
 	                </div>
@@ -50,6 +54,22 @@
 		                <input type="text" name="owner_id" id="task-owner" class="form-control" value="{{ $task->owner->id }}" placeholder="{{ $task->owner->name }}">
 		            </div>
 		        </div>
+
+		        <div class="form-group row">
+	                <label for="task-owner" class="col-sm-3 control-label col-form-label" >Owner</label>
+	                <div class="col-sm-7">
+	                  <select name="owner_id" class="form-control" id="task-owner" placeholder="{{ $task->owner->name }}" >
+	                    @foreach ($users as $user)
+	                        @if ($user->id == $task->owner->id)
+	                    		<option selected="selected" value="{{ $user->id }}">{{ $user->name }}</option>
+	                    	@else
+	                        	<option value="{{ $user->id }}">{{ $user->name }}</option>
+	                    	@endif
+	                    @endforeach
+	                  </select>
+	                </div>
+	            </div>
+
 
 		        <div class="form-group">
 		            <div class="col-sm-offset-3 col-sm-6">
