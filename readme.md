@@ -5,7 +5,8 @@
 
 <h2> Navod: </h2>
 <ul>
-	<li> Treba sa zaregistrovat/lognut</li>
+	<li>Bez prihlasenia je mozne vidiet Task list a detail jednotlivych Taskov</li>
+	<li> Pre pracu s taskmi sa treba zaregistrovat/prihlasit</li>
 	<li> Da sa pouzit login: test@user.sk pass: 123456</li>
 	<li>luvovlne pouzivat applikaciu</li>
 </ul> 
