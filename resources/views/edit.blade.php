@@ -31,14 +31,18 @@
 		            </div>
 		        </div>
 
-		         <div class="form-group row">
-		            <label for="task-assignee" class="col-sm-3 control-label col-form-label">Assignee</label>
+		        <div class="form-group row">
+	                <label for="task-assignee" class="col-sm-3 control-label col-form-label" >Assignee</label>
+	                <div class="col-sm-7">
+	                  <select name="assignee_id" class="form-control" id="task-assignee" value="{{ old('task') }}">
+	                    @foreach ($users as $user)
+	                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+	                    @endforeach
+	                  </select>
+	                </div>
+	            </div>
 
-		            <div class="col-sm-7">
-		                <input type="text" name="assignee_id" id="task-assignee" class="form-control" value="{{ $task->assignee_id }}" placeholder="{{ $task->assignee_id }}">
-		            </div>
-		        </div>
-		       
+
 		        <div class="form-group row">
 		            <label for="task-owner" class="col-sm-3 control-label col-form-label">Owner</label>
 

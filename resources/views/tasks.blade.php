@@ -33,22 +33,25 @@
                             </div>
                         </div>
 
-                         <div class="form-group row">
+<!--                         <div class="form-group row">
                             <label for="task-assignee" class="col-sm-3 control-label col-form-label">Assignee</label>
 
                             <div class="col-sm-7">
                                 <input type="text" name="assignee_id" id="task-assignee" class="form-control" value="{{ old('task') }}">
                             </div>
                         </div>
-                       
-    <!--                     <div class="form-group row">
-                            <label for="task-owner" class="col-sm-3 control-label col-form-label">Owner</label>
-
+!-->
+                        <div class="form-group row">
+                            <label for="task-assignee" class="col-sm-3 control-label col-form-label" >Assignee</label>
                             <div class="col-sm-7">
-                                <input type="text" name="owner" id="task-owner" class="form-control" value="{{ old('task') }}">
+                              <select name="assignee_id" class="form-control" id="task-assignee" value="{{ old('task') }}">
+                                @foreach ($users as $user)
+                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @endforeach
+                              </select>
                             </div>
                         </div>
- -->                       
+                                           
                         <div class="form-group">
                             <div class="form-inline row">
                                 <div class="col-sm-offset-3 col-sm-8">

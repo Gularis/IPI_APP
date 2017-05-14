@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Task;
+use App\User;
 
 
 class TasksController extends Controller
@@ -21,12 +22,11 @@ class TasksController extends Controller
 		$intasks = Task::incomplete()->orderBy('created_at', 'asc')->get();
 		$ctasks = Task::completed()->orderBy('created_at', 'desc')->get();
 
+		$users = User::all();
 		
-	    return view('tasks',[
-    	    'intasks' => $intasks,
-    	    'ctasks' => $ctasks
-        ]);
 
+
+	    return view('tasks', compact('intasks','ctasks', 'users'));
 
 	}
 
@@ -50,6 +50,8 @@ class TasksController extends Controller
 	    		'est_duration' => 'numeric'
 	    	]);
 
+	   /* $assignee = User::find($request->assignee_id)
+*/
 	    $task = new Task;
 	    $task->name = $request->name;
 	    $task->description = $request->description;
@@ -72,8 +74,8 @@ class TasksController extends Controller
 
 	public function edit(Task $task)
 	{
-
-		return view('edit', compact('task'));
+		$users = User::all();
+		return view('edit', compact('task','users'));
 	}
 
 	public function update(Request $request, Task $task)
