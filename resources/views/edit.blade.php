@@ -45,16 +45,7 @@
 	                  </select>
 	                </div>
 	            </div>
-
-
-		        <div class="form-group row">
-		            <label for="task-owner" class="col-sm-3 control-label col-form-label">Owner</label>
-
-		            <div class="col-sm-7">
-		                <input type="text" name="owner_id" id="task-owner" class="form-control" value="{{ $task->owner->id }}" placeholder="{{ $task->owner->name }}">
-		            </div>
-		        </div>
-
+	            
 		        <div class="form-group row">
 	                <label for="task-owner" class="col-sm-3 control-label col-form-label" >Owner</label>
 	                <div class="col-sm-7">
